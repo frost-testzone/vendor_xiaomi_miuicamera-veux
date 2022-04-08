@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Overlay
+PRODUCT_PACKAGES += \
+    NexusLauncherOverlayMIUICAMERA
+
 # Prebuilt APKs
 PRODUCT_PACKAGES += \
     MiuiCamera
