@@ -16,6 +16,10 @@
 ```sh
 patchelf --add-needed "libgui_shim_miuicamera.so" prebuilt/libcamera_algoup_jni.xiaomi.so
 ```
+It was also patched using **[extract-utils](https://github.com/LineageOS/android_tools_extract-utils)**:
+```py
+.sig_replace('08 AD 40 F9', '08 A9 40 F9')
+```
 When the correct `shared_libs` list is not present in Android.bp, `check_elf_file.py` prints it on build:
 ```
 FAILED: Check prebuilt ELF binary: out/soong/.intermediates/vendor/xiaomi/miuicamera-veux/libcamera_algoup_jni.xiaomi/android_arm64_armv8-2a-dotprod_cortex-a55_shared/libcamera_algoup_jni.xiaomi.so
